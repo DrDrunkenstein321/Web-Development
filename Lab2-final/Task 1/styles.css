@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    padding-top: 200px;
+    background-color: rgb(226, 226, 226);
+    padding-bottom: 200px;
+    animation: fadeUp 600ms ease-in forwards;
+}
+.title {
+    color:  #2b5dbf;
+    font-size: 55px;
+}
+.left-div{
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInLeft 600ms ease-out forwards;
+    margin-bottom: 100px;
+}
+.subtitle {
+    font-size: 25px;
+}
+.right-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideInRight 600ms ease-out forwards;
+    animation-delay: 120ms;
+}
+.window-div {
+    width: 380px;
+    padding: 16px;
+    background-color: #ffff;
+    border-radius: 12px;
+    border: 1px solid #dddfe2;
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.06);
+}
+
+.window-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.window-div input {
+    height: 50px;
+    padding: 12px 14px;
+    border: 1px solid #dddfe2;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    font-size: 15px;
+}
+
+.logIn {
+    background-color: #2b5dbf;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+.forgotPassText {
+    text-align: center;
+    color: #2b5dbf;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    background: none;
+    
+}
+
+.line {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 1px;
+    background-color: rgba(180, 183, 179, 0.6);
+}
+.createAccount {
+    background-color: rgb(72, 205, 72);
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.text-div p {
+    text-align: center;
+}
+footer {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: gray;
+    padding-bottom: 50px;
+    opacity: 0;
+
+    animation: footerRight 600ms ease-out forwards;
+    animation-delay: 200ms;
+
+}
+.footer-langs {
+    display: flex;
+    align-items: center;
+ 
+    gap:10px;
+    flex-wrap: wrap;
+}
+.button-plus {
+    background-color: rgba(180, 183, 179, 0.3);
+    border: none;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+@keyframes slideInLeft {
+    to { opacity: 1; transform: translateX(0);}
+}
+@keyframes slideInRight {
+    to { opacity: 1; transform: translateX(0);}
+}
+@keyframes footerRight {
+    to {opacity: 1; transform: translateX(0);}
+    
+}
