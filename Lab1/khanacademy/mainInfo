@@ -1,0 +1,6 @@
+br - for break line like endline
+em - логическое ударение (курсивом) схож с <i> -> italics (курсивом)
+Основная разница между em и i, то что em - подчеркнуть смысл, i - для визуальный стиль
+strong - типо как h1, но размер как у p тега
+
+Selectors: element selector, descendant selector - селектор потомков (найти вложенный тег: Родитель Потомок), class selector, ID selector
