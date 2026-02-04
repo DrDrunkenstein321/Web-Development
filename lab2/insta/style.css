@@ -248,12 +248,15 @@ body{
   gap: 8px;
 }
 
-.fb-dot{
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  background:#1877f2;
+.fb-logo{
+  width: 16px;
+  height: 16px;
+  display:inline-block;
+  flex:0 0 auto;
 }
+
+.fb-logo circle{ fill:#1877f2; }
+.fb-logo path{ fill:#fff; }
 
 .btn-outline2{
   background:#fff;
@@ -270,10 +273,9 @@ body{
 }
 
 .meta-icon{
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, #0a66ff, #00d0ff);
+  width: 24px;
+  height: 16px;
+  display:block;
 }
 
 .meta-link{

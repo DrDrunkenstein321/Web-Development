@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- TOP HEADER -->
   <header class="top_head">
     <div class="top_head_1">
       <div class="top_head_logo">
@@ -53,7 +52,8 @@
         <input class="ths_search" type="search" placeholder="Search..." aria-label="Search">
       </div>
       <div class="divider" aria-hidden="true"></div>
-      <a class="thd_dashboard" href="https://github.com/dashboard">Dashboard</a>
+      <a class="thd_auth" href="https://github.com/login">Sign in</a>
+      <a class="thd_auth thd_auth_primary" href="https://github.com/signup">Sign up</a>
     </div>
   </header>
 
@@ -67,10 +67,10 @@
       <button class="hero_trial_button" type="button">Start free for 30-days</button>
     </section>
 
-    <!-- PRICING (CLICKABLE CARDS) -->
+  
     <section class="pricing" aria-label="Pricing cards">
 
-      <!-- FREE -->
+     
       <article class="s_price p_free_outline is-selected" data-plan="free" tabindex="0" role="button" aria-pressed="true">
         <div class="plan-badge">RECOMMENDED</div>
 
@@ -88,7 +88,7 @@
               <span class="pr_date">per user/month</span>
             </div>
 
-            <button class="p_but p_but_light" type="button">Create a free organization</button>
+            <button class="p_but p_but_light" type="button">Join for free</button>
           </div>
 
           <div class="price_bot">
@@ -105,7 +105,7 @@
         </div>
       </article>
 
-      <!-- TEAM -->
+
       <article class="s_price p_team_outline" data-plan="team" tabindex="0" role="button" aria-pressed="false">
         <div class="plan-badge" hidden>RECOMMENDED</div>
 
@@ -140,7 +140,7 @@
         </div>
       </article>
 
-      <!-- ENTERPRISE -->
+  
       <article class="s_price p_ente_outline" data-plan="enterprise" tabindex="0" role="button" aria-pressed="false">
         <div class="plan-badge" hidden>RECOMMENDED</div>
 
@@ -158,7 +158,7 @@
               <span class="pr_date">per user/month</span>
             </div>
 
-            <div class="two_buttons">
+            <div class="two_buttons" style="display: flex; flex-direction: row;">
               <button class="p_but p_but_dark" type="button">Start a free trial</button>
               <button class="p_but p_but_light" type="button">Contact Sales</button>
             </div>
@@ -181,35 +181,7 @@
     </section>
   </main>
 
-  <script>
-    const cards = document.querySelectorAll('.s_price');
-
-    function selectCard(card) {
-      cards.forEach(c => {
-        const isSelected = (c === card);
-        c.classList.toggle('is-selected', isSelected);
-        c.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
-
-        const badge = c.querySelector('.plan-badge');
-        if (badge) badge.hidden = !isSelected;
-      });
-    }
-
-    // click on card
-    cards.forEach(card => {
-      card.addEventListener('click', () => selectCard(card));
-
-      // keyboard: Enter/Space
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          selectCard(card);
-        }
-      });
-    });
-
-    // default: first already selected
-  </script>
+  
 
 </body>
 </html>
