@@ -37,3 +37,4 @@ containerTasks.addEventListener('click', (e) => {
     const label = e.target.closest('.task');
     if (label) label.remove();
 })
+

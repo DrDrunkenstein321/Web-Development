@@ -4,35 +4,160 @@
     box-sizing: border-box;
     
 }
+:root {
+    color-scheme: light;
+    --bg-cream: #f6f2ea;
+    --bg-peach: #f7d8c4;
+    --ink: #1c1b1a;
+    --ink-soft: #4a3f39;
+    --accent: #e8794e;
+    --accent-dark: #c85f36;
+    --card: #ffffff;
+    --shadow: 0 18px 40px rgba(28, 27, 26, 0.18);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    color: var(--ink);
+    background: radial-gradient(circle at top left, var(--bg-peach), transparent 55%),
+        linear-gradient(135deg, var(--bg-cream) 0%, #fff 45%, #f9efe5 100%);
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 130px;
+    margin-top: 70px;
+    padding: 0 16px 80px;
+}
+
+@media (max-width: 640px) {
+    main {
+        margin-top: 40px;
+    }
+}
+
+.site-header {
+    padding: 26px 20px 18px;
+}
+
+.header-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(28, 27, 26, 0.08);
+    border-radius: 24px;
+    padding: 18px 24px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+    animation: floatIn 0.8s ease both;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+    background: linear-gradient(140deg, var(--accent), var(--accent-dark));
+    box-shadow: 0 12px 20px rgba(232, 121, 78, 0.35);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.brand-title {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.brand-tagline {
+    font-size: 14px;
+    color: var(--ink-soft);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-pill {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(232, 121, 78, 0.12);
+    color: var(--accent-dark);
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .main-text {
     font-size: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    font-family: "Playfair Display", serif;
 }
 .add-button-task {
     text-align: center;
-    background-color: rgba(27, 27, 27, 0.7);
-    width: 25px;
-    height: 25px;
+    background-color: var(--accent);
+    width: 32px;
+    height: 32px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
+    box-shadow: 0 10px 18px rgba(232, 121, 78, 0.35);
     
 }
 .input-text-task {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px solid rgba(28, 27, 26, 0.25);
+    border-radius: 10px;
     font-size: 15px;
-    padding-left: 10px;
-    outline: None;
-    box-shadow: 1px 1px 1px black;
+    padding: 10px 12px;
+    outline: none;
+    min-width: 220px;
+    background-color: var(--card);
+    box-shadow: 0 8px 18px rgba(28, 27, 26, 0.12);
 
 }
 
@@ -40,16 +165,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 10px;
 }
 
 .div-for-tasks {
-    margin-top: 10px;
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
     align-items: flex-start;
-    transform: translateX(-20px)
+    transform: translateX(-20px);
 }
 
 span {
@@ -58,10 +183,24 @@ span {
 }
 .btn-delete {
     margin-left: 50px;
-    font-size: 15px;
-    background-color: rgb(255, 0, 0);
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 5px 15px;
+    font-size: 14px;
+    background-color: #ec4c4c;
+    border: none;
+    border-radius: 18px;
+    padding: 6px 16px;
     color: white;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 14px;
+    padding: 8px 14px;
+    box-shadow: 0 10px 20px rgba(28, 27, 26, 0.1);
+}
+
+.checkInput {
+    accent-color: var(--accent);
 }
